@@ -14,7 +14,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   // REPLACE THIS WITH YOUR API KEY FROM OPENWEATHERMAP
-  const API_KEY = '9ac668c364228cbf2de9bc4e16e9830a';
+  const API_KEY = process.env.REACT_APP_API_KEY || '9ac668c364228cbf2de9bc4e16e9830a';
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
